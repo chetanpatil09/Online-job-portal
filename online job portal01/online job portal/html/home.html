@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Portal</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+    <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="http://127.0.0.1:5500/html/home.html#">JobPortal</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#" class="nav-link">Jobs</a></li>
+          <li class="nav-item"><a href="./company.html" class="nav-link">company</a></li>
+          <li class="nav-item"><a href="./login.html" class="nav-link"><button style="border-radius: 10px; color:rgb(44, 63, 231);">Login/reg</button></a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link"><button onclick="logout()" style="border-radius: 10px; color: rgb(44, 63, 231);">Logout</button></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end the navbar -->
+
+
+
+  <header>
+     <!-- slide show -->
+     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"data-bs-interval="3000">
+          <img src="../css/job1 (2).jpg" class="d-block w-100" alt="job1" height="550px" width="300px" style="opacity: 60%;">
+          <div class="carousel-caption  d-md-block slide">
+            <div class="scroll-text">
+              <h1>welcome to our online job portal website !</h1>  
+            </div>
+            <h1>Find Your Dream Job</h1>
+            <h3 id="p1">Search thousands of jobs in one place</h3>
+            <input type="text" id="jobsearch" class="form-control w-100 w-sm-75 w-md-50 mx-auto mt-3" placeholder="Search jobs..." style="max-width: 500px;border-color: black;" list="jobSuggestions" autocomplete="off">
+            <datalist id="jobSuggestions"></datalist>
+          </div>
+        </div>
+        <div class="carousel-item"data-bs-interval="3000">
+          <img src="../css/services (2).jpg" class="d-block w-100" alt="services" height="550px" width="300px" style="opacity: 60%;">
+          <div class="carousel-caption  d-md-block slide">
+            <div class="scroll-text">
+              <h1>welcome to our online job portal website !</h1>
+            </div>
+            <h1>Find Your Dream Job</h1>
+            <h3 id="p1">Search thousands of jobs in one place</h3>
+           <input type="text" id="jobsearch" class="form-control w-100 w-sm-75 w-md-50 mx-auto mt-3" placeholder="Search jobs..." style="max-width: 500px;border-color: black;" list="jobSuggestions" autocomplete="off">
+            <datalist id="jobSuggestions"></datalist>
+          </div>
+        </div>
+        <div class="carousel-item"data-bs-interval="3000">
+          <img src="../css/about.jpg" class="d-block w-100" alt="about" height="550px" width="300px"style="opacity: 60%;">
+          <div class="carousel-caption  d-md-block slide">
+            <div class="scroll-text">
+              <h1>welcome to our online job portal website !</h1>
+            </div>
+            <h1>Find Your Dream Job</h1>
+            <h3 id="p1">Search thousands of jobs in one place</h3>
+            <input type="text" id="jobsearch" class="form-control w-100 w-sm-75 w-md-50 mx-auto mt-3" placeholder="Search jobs..." style="max-width: 500px;border-color: black;" list="jobSuggestions" autocomplete="off">
+            <datalist id="jobSuggestions"></datalist>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+  </header>
+  <br>
+  <br>
+  <br>
+  <!-- slid show end  -->
+
+
+
+
+  <!-- button for companies -->
+  <div>
+  <div id="btd_sc" class="d-flex flex-wrap justify-content-center gap-2 p-3">
+    <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/remote.svg" alt=""><h3>Remote</h3></button>
+    <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/mnc.svg" alt=""><h3>MNC</h3></button>
+    <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/freshers.svg" alt=""><h3>Fresher</h3></button>
+    <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/analytics.svg" alt=""><h3>Analytics</h3></button>
+    <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/marketing.svg" alt=""><h3>Marketing </h3></button>
+    <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/finance.svg" alt=""><h3>Banking  </h3></button>
+</div>
+<div id="btm_sc"class="d-flex flex-wrap justify-content-center gap-2 p-3">
+  <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/startup.svg" alt=""><h3>Startup </h3></button>
+  <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/data-science.svg" alt=""><h3>Data Science</h3></button>
+  <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/engineering.svg" alt=""><h3>Engineering</h3></button>
+  <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/hr.svg" alt=""><h3>HR </h3></button>
+  <button id="btn_sc"><img src="https://static.naukimg.com/s/0/0/i/trending-naukri/fortune-500.svg" alt=""><h3>Fortune </h3></button>
+</div>
+</div>
+<!-- end this button section here  -->
+ 
+
+
+
+
+<!-- card of job section -->
+  <section class="container my-5" id="Latest">
+    <h2 class="text-center mb-4">Latest Job</h2>
+    <div class="job-carousel d-flex overflow-auto" id="jobList"></div>
+  </section>
+
+  <section class="container my-5" id="trend">
+    <h2 class="text-center mb-4">Trending Companies Here</h2>
+    <div class="job-carousel d-flex overflow-auto" id="open"></div>
+  </section>
+<!-- end section -->
+
+
+
+
+  <!-- Job Reviews Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">What People Say About Us</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"JobPortal helped me land my first job within weeks. The process was simple and efficient!"</p>
+            <h5 class="card-title mb-0">Amit Sharma</h5>
+            <small class="text-muted">Software Developer</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"The platform offers great job filters and recommendations. Highly recommended for freshers."</p>
+            <h5 class="card-title mb-0">Priya Verma</h5>
+            <small class="text-muted">Marketing Executive</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Our company found top talent through JobPortal. It’s now our go-to hiring source."</p>
+            <h5 class="card-title mb-0">HR Manager</h5>
+            <small class="text-muted">TechCorp Pvt Ltd</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- footer section -->
+<footer class="bg-dark text-white pt-4 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- About -->
+      <div class="col-md-4 mb-3">
+        <h5>About JobPortal</h5>
+        <p>Your one-stop destination to find your dream job. We connect job seekers with top companies across industries.</p>
+        <ul>
+        <h5>Why use this site?</h5>
+        <li>Easy to use</li>
+        <li>Lots of job options</li> 
+        <li>Safe and secure platform</li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="./company.html" class="text-white text-decoration-none">Companies</a></li>
+          <li><a href="./login.html" class="text-white text-decoration-none">Login</a></li>
+          <li><a href="./login.html" class="text-white text-decoration-none">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <p>Email: pavaningale09@gmail.com</p>
+        <p>Email: chetanpatil09@gmail.com</p>
+        <p>Phone: +91-7498430856</p>
+        <p>Phone: +91-9498430856</p>
+        <div class="c">
+          <a href="https://www.instagram.com/" class="text-white me-3" ><i class="fa-brands fa-instagram" style="color: #f207a8; font-size:40px;"></i></i></a>
+          <a href="https://www.facebook.com/" class="text-white me-3"><i class="fa-brands fa-facebook" style="color: #74C0FC;font-size:40px;"></i></a>
+          <a href="https://in.linkedin.com/" class="text-white me-3"><i class="fa-brands fa-linkedin" style="color: #474df0;font-size:40px;"></i></a>
+          <a href="https://x.com/" class="text-white me-3"><i class="fa-brands fa-twitter" style="font-size:40px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-light" />
+    <p class="text-center mb-0">© 2025 JobPortal.developed by fortune cloud student</p>
+  </div>
+</footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

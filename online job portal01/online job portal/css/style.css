@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(32, 31, 31);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+}
+
+  
+  header {
+    color:black;
+    background-size: cover;
+    background-position: center;
+    color: rgb(196, 192, 192);
+    height:500px;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+ h1,input{
+  color:wheat;
+  margin-bottom: 30px;
+  font-weight:900;
+  font-size:xx-large;
+  font-style: italic;
+}  
+#p1{
+color:azure;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:bolder;
+font-size: xx-large;
+font-style: italic;
+}
+.scroll-text h1 {
+  animation: scroll-left 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+#Latest,#trend{
+  color: white;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+.card{
+  background-color: azure;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border-color:rgb(255, 0, 0);
+  box-shadow: 5px 5px rgb(1, 255, 9);
+}
+
+#btd_sc{
+  display:flex;
+  justify-content: center;
+  gap:15px;
+  background-color: aquamarine;
+
+ }
+ #btm_sc{
+  display:flex;
+  justify-content: center;
+  gap:15px;
+  margin-top: 25px;;
+  background-color: aquamarine;
+ }
+  #btn_sc{
+  display:flex;
+  padding-left: 30px;
+  padding-right:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap:10px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius:15px ;
+  border:rgb(6, 6, 6)
+
+}
+#btn_sc>img{
+  width:40px;
+  margin:auto;
+  
+}
+
+#btn_sc>h3{
+  text-align: center;
+  margin:auto;
+  line-height: 10px;
+}
+#btn_sc>h3{
+  display:flex;
+ 
+  justify-content: center;
+}
+#btn_sc:hover {
+  box-shadow: rgba(244, 20, 0, 0.704) 0px 6px 12px -2px, rgba(255, 2, 2, 0.3) 0px 3px 7px -3px;
+}
+
+.job-carousel {
+  gap: 1rem;
+  scroll-snap-type: inherit;
+  padding: 0px;
+  scroll-behavior: smooth;
+  display: none;
+  scrollbar-width: none;
+}
+.job-carousel > .col-md-4 {
+  min-width: 300px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+
+}
+
+
+/* Style for the dropdown select */
+.form-select {
+  border-radius: 20px;
+  border: 2px solid #2c3fe7;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+
+
